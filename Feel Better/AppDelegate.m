@@ -1,15 +1,18 @@
 //
 //  AppDelegate.m
-//  Feel Better
+//  TESTEAD3
 //
-//  Created by Arthur Jacunas de Brum on 19/06/15.
-//  Copyright (c) 2015 Arthur Brum. All rights reserved.
+//  Created by Lucas Yamashita on 6/17/15.
+//  Copyright (c) 2015 YUKIOSOFTWARE. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
+{
+    BOOL _bannerIsVisible;
+    ADBannerView *_adBanner;
+}
 @end
 
 @implementation AppDelegate
