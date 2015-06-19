@@ -1,14 +1,15 @@
 //
 //  ViewController.h
-//  Feel Better
+//  TESTEAD3
 //
-//  Created by Arthur Jacunas de Brum on 19/06/15.
-//  Copyright (c) 2015 Arthur Brum. All rights reserved.
+//  Created by Lucas Yamashita on 6/17/15.
+//  Copyright (c) 2015 YUKIOSOFTWARE. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 
 
 @end
