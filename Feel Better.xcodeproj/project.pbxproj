@@ -10,10 +10,14 @@
 		8E1CDC021B34787C00247488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC011B34787C00247488 /* main.m */; };
 		8E1CDC051B34787C00247488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC041B34787C00247488 /* AppDelegate.m */; };
 		8E1CDC081B34787C00247488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC071B34787C00247488 /* ViewController.m */; };
-		8E1CDC0B1B34787C00247488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CDC091B34787C00247488 /* Main.storyboard */; };
-		8E1CDC0D1B34787C00247488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CDC0C1B34787C00247488 /* Images.xcassets */; };
 		8E1CDC101B34787C00247488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CDC0E1B34787C00247488 /* LaunchScreen.xib */; };
 		8E1CDC1C1B34787C00247488 /* Feel_BetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC1B1B34787C00247488 /* Feel_BetterTests.m */; };
+		938F1CC61B348BCD005F42F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938F1CBC1B348BCD005F42F1 /* Main.storyboard */; };
+		938F1CC71B348BCD005F42F1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CBE1B348BCD005F42F1 /* ImageViewController.m */; };
+		938F1CC81B348BCD005F42F1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CC01B348BCD005F42F1 /* MainViewController.m */; };
+		938F1CC91B348BCD005F42F1 /* CustomCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CC21B348BCD005F42F1 /* CustomCollectionHeaderView.m */; };
+		938F1CCA1B348BCD005F42F1 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CC41B348BCD005F42F1 /* CustomCollectionViewCell.m */; };
+		938F1CCB1B348BCD005F42F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938F1CC51B348BCD005F42F1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +38,20 @@
 		8E1CDC041B34787C00247488 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E1CDC061B34787C00247488 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8E1CDC071B34787C00247488 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E1CDC0A1B34787C00247488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E1CDC0C1B34787C00247488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E1CDC0F1B34787C00247488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8E1CDC151B34787C00247488 /* Feel BetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feel BetterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1CDC1A1B34787C00247488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1CDC1B1B34787C00247488 /* Feel_BetterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feel_BetterTests.m; sourceTree = "<group>"; };
+		938F1CBC1B348BCD005F42F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		938F1CBD1B348BCD005F42F1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		938F1CBE1B348BCD005F42F1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		938F1CBF1B348BCD005F42F1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		938F1CC01B348BCD005F42F1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		938F1CC11B348BCD005F42F1 /* CustomCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionHeaderView.h; sourceTree = "<group>"; };
+		938F1CC21B348BCD005F42F1 /* CustomCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionHeaderView.m; sourceTree = "<group>"; };
+		938F1CC31B348BCD005F42F1 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		938F1CC41B348BCD005F42F1 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		938F1CC51B348BCD005F42F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +97,16 @@
 				8E1CDC041B34787C00247488 /* AppDelegate.m */,
 				8E1CDC061B34787C00247488 /* ViewController.h */,
 				8E1CDC071B34787C00247488 /* ViewController.m */,
-				8E1CDC091B34787C00247488 /* Main.storyboard */,
-				8E1CDC0C1B34787C00247488 /* Images.xcassets */,
+				938F1CBC1B348BCD005F42F1 /* Main.storyboard */,
+				938F1CBD1B348BCD005F42F1 /* ImageViewController.h */,
+				938F1CBE1B348BCD005F42F1 /* ImageViewController.m */,
+				938F1CBF1B348BCD005F42F1 /* MainViewController.h */,
+				938F1CC01B348BCD005F42F1 /* MainViewController.m */,
+				938F1CC11B348BCD005F42F1 /* CustomCollectionHeaderView.h */,
+				938F1CC21B348BCD005F42F1 /* CustomCollectionHeaderView.m */,
+				938F1CC31B348BCD005F42F1 /* CustomCollectionViewCell.h */,
+				938F1CC41B348BCD005F42F1 /* CustomCollectionViewCell.m */,
+				938F1CC51B348BCD005F42F1 /* Images.xcassets */,
 				8E1CDC0E1B34787C00247488 /* LaunchScreen.xib */,
 				8E1CDBFF1B34787C00247488 /* Supporting Files */,
 			);
@@ -199,9 +219,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1CDC0B1B34787C00247488 /* Main.storyboard in Resources */,
+				938F1CCB1B348BCD005F42F1 /* Images.xcassets in Resources */,
 				8E1CDC101B34787C00247488 /* LaunchScreen.xib in Resources */,
-				8E1CDC0D1B34787C00247488 /* Images.xcassets in Resources */,
+				938F1CC61B348BCD005F42F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938F1CC91B348BCD005F42F1 /* CustomCollectionHeaderView.m in Sources */,
 				8E1CDC081B34787C00247488 /* ViewController.m in Sources */,
 				8E1CDC051B34787C00247488 /* AppDelegate.m in Sources */,
+				938F1CC71B348BCD005F42F1 /* ImageViewController.m in Sources */,
+				938F1CCA1B348BCD005F42F1 /* CustomCollectionViewCell.m in Sources */,
+				938F1CC81B348BCD005F42F1 /* MainViewController.m in Sources */,
 				8E1CDC021B34787C00247488 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +268,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E1CDC091B34787C00247488 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E1CDC0A1B34787C00247488 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E1CDC0E1B34787C00247488 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +432,7 @@
 				8E1CDC211B34787C00247488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E1CDC221B34787C00247488 /* Build configuration list for PBXNativeTarget "Feel BetterTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				8E1CDC241B34787C00247488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
