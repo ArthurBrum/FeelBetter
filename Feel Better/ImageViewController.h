@@ -13,9 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIImage *mealImage;
 @property (weak, nonatomic) IBOutlet UILabel *unavailableLabel;
-@property NSIndexPath *indexPath;
+@property NSString *imagePath;
 @property BOOL hidden;
 
 - (IBAction)ReturnToView:(id)sender;
-- (IBAction)removePhoto:(id)sender;
 @end
