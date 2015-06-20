@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m4H-ZK-sgD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UyZ-kc-YNX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -143,6 +143,9 @@
                                     <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="m4H-ZK-sgD" kind="show" id="Ha5-3y-nJk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,15 +154,10 @@
                             <constraint firstItem="biR-Ip-R4y" firstAttribute="top" secondItem="SRA-6d-8GM" secondAttribute="bottom" constant="10" id="xtl-o4-Lpi"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="pressureMbLabel" destination="qc4-c7-i1h" id="h0m-AA-dDr"/>
-                        <outlet property="statusLabel" destination="51Z-eU-ZIH" id="uHo-OT-Fr6"/>
-                        <outlet property="tempCLabel" destination="QMs-9p-hkY" id="8E9-kb-ex8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DD-aw-Deu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1780.5" y="-271"/>
+            <point key="canvasLocation" x="-1797" y="-21"/>
         </scene>
         <!--Water and Food-->
         <scene sceneID="pVs-uT-X3Y">
@@ -235,7 +233,6 @@
         <!--Set Notifications-->
         <scene sceneID="WFM-Yi-6Ux">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qyr-b0-VxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Set Notifications" id="CLa-C5-CU7" customClass="SaveNotificationsTableViewController" customModule="Feel_Better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="8q5-et-ntu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -277,6 +274,7 @@
                         <outlet property="datePickerTime" destination="X91-Oi-1Yd" id="kOJ-Qb-f3x"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyr-b0-VxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="654" y="835"/>
         </scene>
