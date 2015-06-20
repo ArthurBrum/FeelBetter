@@ -16,7 +16,7 @@
 @property (nonatomic) NSMutableArray *monthPhotos;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIButton *takePhotoButton;
-
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
 @end
 
 @implementation MainViewController
@@ -25,15 +25,21 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    
     self.takePhotoButton.layer.cornerRadius = 10;
+    self.homeButton.layer.cornerRadius = 10;
     if(!(self.monthPhotos = [[self returnArrayData] mutableCopy])) {
         NSMutableArray *arrayData = [self createTwoDimentionsArray];
         [self storeArrayData:arrayData];
-        self.monthPhotos = [[self returnArrayData] mutableCopy];
         [self.collectionView reloadData];
     }
+    self.monthPhotos = [[self returnArrayData] mutableCopy];
+    [self printArray:self.monthPhotos];
 }
 
+- (IBAction)returnToHome:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Camera related methods
 
@@ -74,7 +80,7 @@
         NSLog(@"imagePathName = %@", imagePathName);
         
         NSMutableArray *monthArray = [self.monthPhotos mutableCopy];
-        NSMutableArray *dayArray = [[self.monthPhotos objectAtIndex:mealPosition] mutableCopy];
+        NSMutableArray *dayArray = [[self.monthPhotos objectAtIndex:dayPosition] mutableCopy];
         [dayArray replaceObjectAtIndex:mealPosition withObject: imagePathName];
         [monthArray replaceObjectAtIndex:dayPosition withObject:dayArray];
         [self storeArrayData:monthArray];
@@ -243,10 +249,10 @@
     if(hour >= 4 && hour < 9){
         return 0;
     }
-    else if(hour >= 10 && hour <= 14){
+    else if(hour >= 9 && hour < 14){
         return 1;
     }
-    else if(hour >= 17 && hour < 23) {
+    else if(hour >= 19 && hour < 23) {
         return 2;
     }
     else {
@@ -255,4 +261,9 @@
     
 }
 
+- (void) printArray: (NSArray *) array {
+    for (int i = 0; i < 31; i++){
+        NSLog(@"%@", array[i]);
+    }
+}
 @end

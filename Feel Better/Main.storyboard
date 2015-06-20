@@ -73,18 +73,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-7g-Q7j">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-7g-Q7j">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpy-ei-ArZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpy-ei-ArZ">
                                             <rect key="frame" x="27" y="10" width="100" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="wDu-Ae-sLZ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="kpy-ei-ArZ" firstAttribute="top" secondItem="0MZ-3s-tbF" secondAttribute="topMargin" constant="2" id="8ID-2O-YCl"/>
+                                        <constraint firstItem="d4s-7g-Q7j" firstAttribute="centerY" secondItem="kpy-ei-ArZ" secondAttribute="centerY" id="ECL-1M-krP"/>
+                                        <constraint firstItem="kpy-ei-ArZ" firstAttribute="leading" secondItem="0MZ-3s-tbF" secondAttribute="leadingMargin" constant="19" id="Pah-t7-dXC"/>
+                                        <constraint firstAttribute="trailing" secondItem="d4s-7g-Q7j" secondAttribute="trailing" id="Rmx-35-kT0"/>
+                                        <constraint firstAttribute="bottom" secondItem="d4s-7g-Q7j" secondAttribute="bottom" id="bF2-3x-sfb"/>
+                                        <constraint firstItem="d4s-7g-Q7j" firstAttribute="leading" secondItem="0MZ-3s-tbF" secondAttribute="leading" id="cNz-b0-Q5t"/>
+                                        <constraint firstItem="d4s-7g-Q7j" firstAttribute="top" secondItem="0MZ-3s-tbF" secondAttribute="top" id="m02-NH-YPd"/>
+                                    </constraints>
                                     <connections>
                                         <outlet property="headerLabel" destination="kpy-ei-ArZ" id="ebR-6Y-244"/>
                                     </connections>
@@ -108,16 +120,34 @@
                                     <action selector="takePhoto:" destination="gpw-mK-7i1" eventType="touchUpInside" id="XwJ-Ed-sw1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjT-W7-pcF">
+                                <rect key="frame" x="303" y="612" width="56" height="47"/>
+                                <color key="backgroundColor" red="0.72628045080000003" green="0.72629773620000004" blue="0.72628843779999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="OZi-DK-ky0"/>
+                                </constraints>
+                                <state key="normal" image="home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToHome:" destination="gpw-mK-7i1" eventType="touchUpInside" id="T4a-i1-ItT"/>
+                                    <action selector="takePhoto:" destination="gpw-mK-7i1" eventType="touchUpInside" id="2gv-T0-io8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="1J4-M3-gHo" secondAttribute="trailing" constant="287" id="06S-zV-OCw"/>
+                            <constraint firstItem="QUT-Qs-5TM" firstAttribute="top" secondItem="FjT-W7-pcF" secondAttribute="bottom" constant="8" symbolic="YES" id="GZa-tZ-X1X"/>
+                            <constraint firstItem="FjT-W7-pcF" firstAttribute="top" secondItem="1J4-M3-gHo" secondAttribute="top" id="KyI-rn-cOa"/>
                             <constraint firstItem="QUT-Qs-5TM" firstAttribute="top" secondItem="1J4-M3-gHo" secondAttribute="bottom" constant="8" id="PAM-9M-N0a"/>
+                            <constraint firstItem="FjT-W7-pcF" firstAttribute="trailing" secondItem="6hb-ta-amj" secondAttribute="trailingMargin" id="jTN-To-NDE"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="Fg2-SW-ZG1" id="ypz-do-zsY"/>
+                        <outlet property="homeButton" destination="FjT-W7-pcF" id="Hm3-JM-vFl"/>
                         <outlet property="takePhotoButton" destination="1J4-M3-gHo" id="mal-Gn-RXD"/>
                     </connections>
                 </viewController>
@@ -134,7 +164,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aNL-5k-bls"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DIa-g6-R9u">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -346,6 +376,7 @@
         <image name="black" width="256" height="256"/>
         <image name="cameraIcon" width="512" height="512"/>
         <image name="health" width="457" height="327"/>
+        <image name="home" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vhC-Za-Aae"/>
