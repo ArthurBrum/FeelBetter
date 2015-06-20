@@ -221,7 +221,7 @@
                             <outlet property="delegate" destination="SC4-g2-qqd" id="Ayn-C5-CLg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Water and Food" id="QVd-AS-a9h"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="QVd-AS-a9h"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjx-LW-XUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +265,9 @@
                             <outlet property="delegate" destination="CLa-C5-CU7" id="fqh-JN-OKV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Set the time" id="Gaw-3G-oMG"/>
+                    <navigationItem key="navigationItem" title="Set the time" id="Gaw-3G-oMG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="g7B-vI-y6u"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="datePickerTime" destination="X91-Oi-1Yd" id="kOJ-Qb-f3x"/>
                     </connections>

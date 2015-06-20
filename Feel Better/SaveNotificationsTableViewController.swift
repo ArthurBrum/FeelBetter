@@ -18,7 +18,7 @@ class SaveNotificationsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        datePickerTime.enabled = false;
+        datePickerTime.userInteractionEnabled = false;
         
         self.clearsSelectionOnViewWillAppear = false
 
@@ -79,11 +79,11 @@ class SaveNotificationsTableViewController: UITableViewController {
     func editTime(sender: AnyObject){
         if (self.navigationItem.rightBarButtonItem?.title == "Edit"){
             self.navigationItem.rightBarButtonItem?.title = "Done"
-            self.datePickerTime.enabled = true
+            self.datePickerTime.userInteractionEnabled = true
             
         }else if (self.navigationItem.rightBarButtonItem?.title == "Done"){
             self.navigationItem.rightBarButtonItem?.title = "Edit"
-            self.datePickerTime.enabled = false
+            self.datePickerTime.userInteractionEnabled = false
             self.scheduleLocalNotification()
         }
         
