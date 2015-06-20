@@ -12,6 +12,7 @@
 		8E1CDC081B34787C00247488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC071B34787C00247488 /* ViewController.m */; };
 		8E1CDC101B34787C00247488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CDC0E1B34787C00247488 /* LaunchScreen.xib */; };
 		8E1CDC1C1B34787C00247488 /* Feel_BetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CDC1B1B34787C00247488 /* Feel_BetterTests.m */; };
+		8E27F4681B34A8B800D18B2C /* SaveNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27F4671B34A8B800D18B2C /* SaveNotificationsTableViewController.swift */; };
 		938F1CC61B348BCD005F42F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938F1CBC1B348BCD005F42F1 /* Main.storyboard */; };
 		938F1CC71B348BCD005F42F1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CBE1B348BCD005F42F1 /* ImageViewController.m */; };
 		938F1CC81B348BCD005F42F1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938F1CC01B348BCD005F42F1 /* MainViewController.m */; };
@@ -42,6 +43,8 @@
 		8E1CDC151B34787C00247488 /* Feel BetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feel BetterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1CDC1A1B34787C00247488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1CDC1B1B34787C00247488 /* Feel_BetterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feel_BetterTests.m; sourceTree = "<group>"; };
+		8E27F4661B34A8B700D18B2C /* Feel Better-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Feel Better-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E27F4671B34A8B800D18B2C /* SaveNotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNotificationsTableViewController.swift; sourceTree = "<group>"; };
 		938F1CBC1B348BCD005F42F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		938F1CBD1B348BCD005F42F1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		938F1CBE1B348BCD005F42F1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				938F1CC51B348BCD005F42F1 /* Images.xcassets */,
 				8E1CDC0E1B34787C00247488 /* LaunchScreen.xib */,
 				8E1CDBFF1B34787C00247488 /* Supporting Files */,
+				8E27F4671B34A8B800D18B2C /* SaveNotificationsTableViewController.swift */,
+				8E27F4661B34A8B700D18B2C /* Feel Better-Bridging-Header.h */,
 			);
 			path = "Feel Better";
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				8E1CDC051B34787C00247488 /* AppDelegate.m in Sources */,
 				938F1CC71B348BCD005F42F1 /* ImageViewController.m in Sources */,
 				938F1CCA1B348BCD005F42F1 /* CustomCollectionViewCell.m in Sources */,
+				8E27F4681B34A8B800D18B2C /* SaveNotificationsTableViewController.swift in Sources */,
 				938F1CC81B348BCD005F42F1 /* MainViewController.m in Sources */,
 				8E1CDC021B34787C00247488 /* main.m in Sources */,
 			);
@@ -299,6 +305,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -318,6 +325,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Feel Better";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -342,6 +350,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,6 +363,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Feel Better";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -363,9 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Feel Better/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Feel Better/Feel Better-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -373,9 +386,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Feel Better/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Feel Better/Feel Better-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UyZ-kc-YNX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m4H-ZK-sgD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -136,12 +136,142 @@
                     <view key="view" contentMode="scaleToFill" id="DIa-g6-R9u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biR-Ip-R4y">
+                                <rect key="frame" x="468" y="30" width="106" height="30"/>
+                                <state key="normal" title="Agua e Comida">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="biR-Ip-R4y" secondAttribute="trailing" constant="10" id="sZ0-z9-bwQ"/>
+                            <constraint firstItem="biR-Ip-R4y" firstAttribute="top" secondItem="SRA-6d-8GM" secondAttribute="bottom" constant="10" id="xtl-o4-Lpi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DD-aw-Deu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1513" y="-280"/>
+            <point key="canvasLocation" x="-1780.5" y="-271"/>
+        </scene>
+        <!--Water and Food-->
+        <scene sceneID="pVs-uT-X3Y">
+            <objects>
+                <tableViewController title="Water and Food" id="SC4-g2-qqd" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8Z4-JR-ouq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Água" id="qxP-ei-E2B">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gyF-K5-XtQ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gyF-K5-XtQ" id="w9d-1f-TTd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First glass of the day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqI-Tp-Zzh">
+                                                    <rect key="frame" x="8" y="12" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="EqI-Tp-Zzh" secondAttribute="centerY" id="XUv-m4-pUz"/>
+                                                <constraint firstItem="EqI-Tp-Zzh" firstAttribute="leading" secondItem="w9d-1f-TTd" secondAttribute="leadingMargin" id="vmj-8O-0MI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CLa-C5-CU7" kind="show" id="t8u-ZQ-Fvf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Comida" id="8ep-Fq-UcU">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="qX6-Jm-tpk">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qX6-Jm-tpk" id="J3M-b2-ryN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First meal of the day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-RN-DOX">
+                                                    <rect key="frame" x="8" y="12" width="157" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B1K-RN-DOX" firstAttribute="leading" secondItem="J3M-b2-ryN" secondAttribute="leadingMargin" id="MVv-fm-e6e"/>
+                                                <constraint firstAttribute="centerY" secondItem="B1K-RN-DOX" secondAttribute="centerY" id="aHF-J7-4pJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CLa-C5-CU7" kind="show" identifier="foodSegue" id="vhC-Za-Aae"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SC4-g2-qqd" id="Amy-cT-oOX"/>
+                            <outlet property="delegate" destination="SC4-g2-qqd" id="Ayn-C5-CLg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Water and Food" id="QVd-AS-a9h"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjx-LW-XUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="835"/>
+        </scene>
+        <!--Set Notifications-->
+        <scene sceneID="WFM-Yi-6Ux">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyr-b0-VxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Set Notifications" id="CLa-C5-CU7" customClass="SaveNotificationsTableViewController" customModule="Feel_Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="8q5-et-ntu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="The time you usually wake up" id="jqn-Xs-bQM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="JEj-my-6jr">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JEj-my-6jr" id="bOd-yW-FoJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="X91-Oi-1Yd">
+                                                    <rect key="frame" x="140" y="-6" width="320" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="456438163.61914402">
+                                                        <!--2015-06-19 20:22:43 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="X91-Oi-1Yd" secondAttribute="centerX" id="Pmz-2j-hat"/>
+                                                <constraint firstAttribute="centerY" secondItem="X91-Oi-1Yd" secondAttribute="centerY" id="vW8-NU-96R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="CLa-C5-CU7" id="Qfh-Ps-TgH"/>
+                            <outlet property="delegate" destination="CLa-C5-CU7" id="fqh-JN-OKV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Set the time" id="Gaw-3G-oMG"/>
+                    <connections>
+                        <outlet property="datePickerTime" destination="X91-Oi-1Yd" id="kOJ-Qb-f3x"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="654" y="835"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="SJu-qJ-get">
@@ -184,7 +314,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JE0-ro-wQ3" firstAttribute="top" secondItem="SaK-Vz-mws" secondAttribute="bottom" constant="43" id="5OI-yL-JOE"/>
                             <constraint firstAttribute="centerY" secondItem="FDE-LC-dXH" secondAttribute="centerY" constant="48" id="6lx-sJ-udd"/>
@@ -204,10 +334,31 @@
             </objects>
             <point key="canvasLocation" x="-328.5" y="-258.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a12-su-rw6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m4H-ZK-sgD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jqq-cs-S5i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SC4-g2-qqd" kind="relationship" relationship="rootViewController" id="2yS-kP-jEX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgk-ym-g4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1113" y="835"/>
+        </scene>
     </scenes>
     <resources>
         <image name="black" width="256" height="256"/>
         <image name="cameraIcon" width="512" height="512"/>
         <image name="health" width="457" height="327"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vhC-Za-Aae"/>
+    </inferredMetricsTieBreakers>
 </document>
