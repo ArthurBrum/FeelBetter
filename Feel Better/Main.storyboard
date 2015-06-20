@@ -151,6 +151,11 @@
                             <constraint firstItem="biR-Ip-R4y" firstAttribute="top" secondItem="SRA-6d-8GM" secondAttribute="bottom" constant="10" id="xtl-o4-Lpi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pressureMbLabel" destination="qc4-c7-i1h" id="h0m-AA-dDr"/>
+                        <outlet property="statusLabel" destination="51Z-eU-ZIH" id="uHo-OT-Fr6"/>
+                        <outlet property="tempCLabel" destination="QMs-9p-hkY" id="8E9-kb-ex8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DD-aw-Deu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

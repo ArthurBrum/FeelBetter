@@ -26,12 +26,12 @@
     [super viewDidLoad];
     
     self.takePhotoButton.layer.cornerRadius = 10;
-    
     if(!(self.monthPhotos = [[self returnArrayData] mutableCopy])) {
         NSMutableArray *arrayData = [self createTwoDimentionsArray];
         [self storeArrayData:arrayData];
+        self.monthPhotos = [[self returnArrayData] mutableCopy];
+        [self.collectionView reloadData];
     }
-    [self.collectionView reloadData];
 }
 
 
@@ -104,21 +104,6 @@
         image = [UIImage imageNamed:@"black.png"];
     }
     return image;
-}
-
-- (void) removeImage : (NSString *) imagePath{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentDirectory stringByAppendingPathComponent:[NSString stringWithFormat: @"%@.png", imagePath]];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
-    if ([fileManager removeItemAtPath:path error:&error]) {
-        NSLog(@"Removed successful");
-    }
-    else {
-        NSLog(@"Could not delete file -:%@", [error localizedDescription]);
-    }
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -225,7 +210,7 @@
         ImageViewController *imageViewController = [segue destinationViewController];
         if(![[[self.monthPhotos objectAtIndex:selectedIndexPath.section]objectAtIndex:selectedIndexPath.item] isEqualToString:@"N"]){
             imageViewController.mealImage = [self loadImage:selectedIndexPath.section :selectedIndexPath.row];
-            imageViewController.indexPath = selectedIndexPath;
+            imageViewController.imagePath = [[self.monthPhotos objectAtIndex:selectedIndexPath.section] objectAtIndex:selectedIndexPath.item];
             imageViewController.hidden = YES;
         }
         else {
@@ -258,7 +243,7 @@
     if(hour >= 4 && hour < 9){
         return 0;
     }
-    else if(hour >= 10 && hour <= 16){
+    else if(hour >= 10 && hour <= 14){
         return 1;
     }
     else if(hour >= 17 && hour < 23) {
